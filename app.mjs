@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const addButton = document.querySelectorAll('button')[0];
+    const removeButton = document.querySelectorAll('button')[1];
+
     addButton.addEventListener('click', function() {
 
         const newTaskDiv = document.createElement('div')
@@ -17,4 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const body = document.querySelector('body');
         body.insertBefore(newTaskDiv, buttonsDiv);
     });
+
+    removeButton.addEventListener('click', function() {
+
+        const allDivs = document.querySelectorAll('div');
+        const taskDivs = Array.from(allDivs).filter(div =>
+            div.querySelector('textarea')
+        );
+
+        if (taskDivs.length > 1) {
+            const lastTaskDiv = taskDivs[taskDivs.length - 1];
+            lastTaskDiv.remove();
+        }
+    })
 });

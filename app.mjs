@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newTaskTextArea = document.createElement('textarea');
         newTaskTextArea.id = 'sourcetext';
         newTaskTextArea.rows = '1';
+        newTaskTextArea.placeholder = 'Write Your Task Here'
         newTaskDiv.appendChild(newTaskTextArea)
 
         const buttonsDiv = document.querySelector('div:last-of-type');

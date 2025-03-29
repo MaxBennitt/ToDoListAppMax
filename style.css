@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: blueviolet;
+    color: white;
+    height: calc(100px - 70px);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #05c7cf;
+    color: red;
+    border: none;
+    padding: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #aaf5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
